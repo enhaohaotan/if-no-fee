@@ -1,2 +1,16 @@
 # if-no-fee
-Regularly check if the payment status of New to Denmark has changed to no fee
+定期查询New to Denmark付款状态是否变为no fee。
+
+##### *需要使用chrome浏览器，需要安装selenium
+
+##### *程序需要一直运行，每次查询会自动打开网页进行查询并关闭，会输出时间戳和支付状态
+
+---
+
+#### 有三个地方需要更改：
+
++  **15行**  `to_email = "*******@**.**"`  填写你的收件邮箱；
+
++  **34行**  `input_box.send_keys("**-****-**")`  填写你的case order id；
+
++  **71行**  `time.sleep(3600)`  设定每次查询的间隔时间，单位是秒，默认3600即为每小时查询一次。
