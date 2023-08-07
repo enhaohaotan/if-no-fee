@@ -61,11 +61,10 @@ while True:
                 server.sendmail(from_email, to_email, message.as_string())
 
             break
-
-    except Exception as e:
-        pass
-    
-    finally:
+            
         driver.quit()
 
-    time.sleep(3600)  # 设定每次查询的间隔时间，单位是秒，3600即为每小时查询一次
+        time.sleep(3600)  # 设定每次查询的间隔时间，单位是秒，3600即为每小时查询一次
+
+    except Exception as e:
+        driver.quit()
